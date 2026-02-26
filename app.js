@@ -132,8 +132,17 @@ console.log(filterApples(["Banana", "Apple", "Orange", "Apple"]));
 /** 11.) Given array, filter out falsy values
  * and only return truthy values */
 
-function removeFalsy (arr) {
-  return arr.filter(elem => !!elem)
+function removeFalsy(arr) {
+  return arr.filter((elem) => !!elem);
 }
 
-console.log(removeFalsy(['', 'True', 0, null]));
+console.log(removeFalsy([null, "String", undefined, 0, 1, "False"]));
+
+/** 12.) Given array of elements, return the same array of elements
+ * in their boolean value */
+
+function convertBoolean(arr) {
+    return arr.map(elem => !!elem);
+  }
+
+console.log(convertBoolean([500, 0, "Braxton", "", []]));
